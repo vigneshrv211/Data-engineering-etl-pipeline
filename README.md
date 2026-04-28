@@ -1,35 +1,71 @@
-# Data Engineering ETL Pipeline (Medallion Architecture)
+🚀 End-to-End Data Engineering Pipeline (Medallion Architecture)
+📌 Project Overview
 
-## 🚀 Project Overview
-This project demonstrates an end-to-end ETL pipeline using PySpark and Databricks concepts.
+This project demonstrates a real-world Data Engineering ETL pipeline built using PySpark, following the Medallion Architecture (Bronze → Silver → Gold) approach.
 
-## 🏗 Architecture
-Bronze → Silver → Gold layers
+The pipeline processes raw data from multiple sources (CRM and ERP systems), performs data cleaning and transformations, and produces a final consolidated dataset for analytics and reporting.
 
-## 🔧 Tech Stack
-- Python
-- PySpark
-- Databricks (or local Spark)
-- SQL
+🏗️ Architecture
 
-## 📂 Data Flow
-1. Bronze Layer – Raw data ingestion
-2. Silver Layer – Data cleaning & transformation
-   - CRM Data
-   - ERP Data
-3. Gold Layer – Final aggregated dataset
+The pipeline is divided into three layers:
 
-## 📊 Key Features
-- ETL pipeline design
-- Data validation checks
-- Transformation logic
-- Multi-source data integration
+🥉 Bronze Layer (Raw Data Ingestion)
+Ingests raw data from source systems
+Stores data in its original format
+No transformations applied
+🥈 Silver Layer (Data Cleaning & Transformation)
+Cleans and standardizes data
+Handles missing values and inconsistencies
+Separate processing for:
+CRM data
+ERP data
+🥇 Gold Layer (Business-Ready Data)
+Combines CRM and ERP datasets
+Applies business logic and aggregations
+Produces final structured data for reporting
+🔧 Tech Stack
+Python
+PySpark
+SQL
+Databricks / Spark Environment
+📂 Project Structure
+data-engineering-etl-pipeline/
+│
+├── notebooks/
+│   ├── bronze_layer.ipynb
+│   ├── silver_crm.ipynb
+│   ├── silver_erp.ipynb
+│   ├── gold_layer.ipynb
+│
+├── screenshots/
+├── README.md
+├── requirements.txt
+🔄 Data Flow
+Raw data is ingested into the Bronze layer
+Data is cleaned and transformed in the Silver layer
+Final datasets are created in the Gold layer for analytics
+⚙️ Key Features
+End-to-end ETL pipeline design
+Multi-source data integration (CRM + ERP)
+Data cleaning and transformation using PySpark
+Layered architecture (Bronze, Silver, Gold)
+Scalable and modular pipeline structure
+📊 Business Use Case
 
-## 📸 Screenshots
-(Add images here)
+Organizations often receive data from multiple systems such as CRM and ERP.
+This project simulates how a data engineer builds a pipeline to:
 
-## ▶️ How to Run
-Steps to run your notebooks
+Standardize data across systems
+Ensure data quality and consistency
+Deliver a unified dataset for reporting and decision-making
+▶️ How to Run
+Install dependencies:
+pip install pyspark
+Open notebooks in:
+Jupyter Notebook / VS Code
+Databricks (recommended)
+Run notebooks in order:
+Bronze → Silver CRM → Silver ERP → Gold
+📸 Screenshots
 
-## 💡 Use Case
-Explain why this project is useful (real-world scenario)
+(Add screenshots of outputs, transformations, and final datasets here)
