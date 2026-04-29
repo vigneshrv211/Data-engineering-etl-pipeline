@@ -112,7 +112,8 @@ pip install pyspark
 
 ## 📸 Screenshots
 
-(Add screenshots of outputs, transformations, and final datasets here)
+<img width="1167" height="665" alt="image" src="https://github.com/user-attachments/assets/8dc6817d-b05c-4ae9-9505-b48670ff92dc" />
+
 
 ---
 
